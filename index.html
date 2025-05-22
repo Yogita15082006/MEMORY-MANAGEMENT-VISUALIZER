@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Memory Management Visualizer</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Memory Management Visualizer</h1>
+    <div class="controls">
+      <input id="process-name" type="text" placeholder="Process Name"/>
+      <input id="process-size" type="number" placeholder="Size(KB)"/>
+      <select id="allocation-strategy">
+        <option>First Fit</option>
+        <option>Best Fit</option>
+        <option>Worst Fit</option>
+      </select>
+      <select id="mode">
+        <option value="paging">Paging</option>
+        <option value="segmentation">Segmentation</option>
+      </select>
+      <button id="allocate-btn">Allocate</button>
+      <button id="deallocate-btn">Deallocate</button>
+      <button id="reset-btn">Reset</button>
+    </div>
+
+    <div class="memory-area" id="memory-area"></div>
+
+    <div class="legend">
+      <span><div class="block free"></div> Free</span>
+      <span><div class="block allocated"></div> Allocated</span>
+      <span><div class="block fragmented"></div> Fragmented</span>
+    </div>
+
+    <div class="page-table" id="page-table"></div>
+    <div class="segment-table" id="segment-table"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

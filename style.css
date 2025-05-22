@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #f4f6f9;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  padding: 20px;
+}
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+input, select, button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #2980b9;
+}
+.memory-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 2px dashed #bdc3c7;
+  padding: 20px;
+  min-height: 150px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.memory-block {
+  width: 100px;
+  height: 50px;
+  margin: 5px;
+  background-color: #ecf0f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  box-shadow: 0 0 3px #aaa;
+  transition: transform 0.3s ease;
+}
+.memory-block:hover {
+  transform: scale(1.05);
+}
+.legend {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 0.9rem;
+}
+.block {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 4px;
+}
+.free { background-color: #2ecc71; }
+.allocated { background-color: #3498db; }
+.fragmented { background-color: #f39c12; }
+.page-entry {
+  background-color: #ecf0f1;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+.page-table, .segment-table {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+
+/* Enhanced animations and colors */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+.memory-block {
+  width: 100px;
+  height: 50px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  animation: fadeIn 0.4s ease;
+  transition: transform 0.3s ease;
+}
+
+.memory-block:hover {
+  transform: scale(1.08);
+}
+
+.memory-block.allocated {
+  background-color: #1abc9c;
+  color: white;
+}
+
+.memory-block.free {
+  background-color: #27ae60;
+  color: white;
+}
+
+.memory-block.fragmented {
+  background-color: #e67e22;
+  color: white;
+}
+
+
+/* UI visual enhancements */
+
+body {
+  background: linear-gradient(to right, #f1f2b5, #135058);
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+input, select, button {
+  padding: 12px 18px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #aaa;
+  transition: box-shadow 0.2s;
+}
+
+input:focus, select:focus {
+  box-shadow: 0 0 6px rgba(52, 152, 219, 0.6);
+  outline: none;
+}
+
+button {
+  background-color: #007acc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #005f99;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+
+/* 3D Heading Effect */
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 0 #bdc3c7, 4px 4px 0 #7f8c8d;
+}
+
+
+/* Professional UI Heading */
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2.8rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #007acc, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
